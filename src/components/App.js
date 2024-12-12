@@ -6,14 +6,14 @@ function App() {
   const [visible, setVisible] = useState(false);
 
   const handleParaDisplay = () => {
-      setVisible(prev => !prev);
+      setVisible(true);
   }
 
   return (
     <div id="main">
       {/* ONS  Do not alter the main div */}
       <button id="click" onClick={handleParaDisplay}>Show Para</button>
-      <p id="para" style={{display: visible ? "block" : "none"}}>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy.</p>
+      {visible && <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy.</p>}
       
     </div>
   );
